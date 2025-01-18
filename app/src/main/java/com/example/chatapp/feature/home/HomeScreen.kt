@@ -48,7 +48,7 @@ fun HomeScreen(navController: NavController) {
                 addChannel.value = true
             }) {
             Text(
-                text = "Add Channel", modifier = Modifier.padding(16.dp), color = Color.White
+                text = "Add Group", modifier = Modifier.padding(16.dp), color = Color.White
             )
         }
     }) {
@@ -97,11 +97,11 @@ fun AddChannelDialog(onAddChannel: (String) -> Unit) {
         verticalArrangement = androidx.compose.foundation.layout.Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Add Channel")
+        Text(text = "Add Group")
         Spacer(modifier = Modifier.padding(8.dp))
         TextField(value = channelName.value, onValueChange = {
             channelName.value = it
-        }, label = { Text(text = "Channel Name") }, singleLine = true)
+        }, label = { Text(text = "Group Name") }, singleLine = true)
         Spacer(modifier = Modifier.padding(8.dp))
         Button(onClick = { onAddChannel(channelName.value) }, modifier = Modifier.fillMaxWidth()) {
             Text(text = "Add")
